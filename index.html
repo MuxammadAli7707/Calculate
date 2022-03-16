@@ -5,14 +5,155 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Calculator</title>
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
-  <link rel="stylesheet" href="css/col.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+  <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <div class="calc">
+    <div class="output">
+      <p id="output" class="output__num">0</p>
+    </div>
+    <div id="main" class="calc__main">
+      <div class="calc__box d-flex align-items-center">
+        <div class="col-3 d-flex justify-content-center">
+          <button id="seven" class="calc__num">7</button>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <button id="eight" class="calc__num">8</button>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <button id="nine" class="calc__num">9</button>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <button id="deleteAll" class="calc__num">AC</button>
+        </div>
+      </div>
 
+      <div class="calc__box d-flex align-items-center">
+        <div class="col-3 d-flex justify-content-center">
+          <button id="four" class="calc__num">4</button>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <button id="five" class="calc__num">5</button>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <button id="six" class="calc__num">6</button>
+        </div>
+        <div class="calc__btn col-3 d-flex justify-content-center">
+          <button id="left" class="calc__left"><i class='bx bx-chevron-left'></i></button>
+        </div>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <div class="col-9">
+          <div class="calc__box d-flex align-items-center">
+            <div class="col-4 d-flex justify-content-center">
+              <button id="one" class="calc__num">1</button>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+              <button id="two" class="calc__num">2</button>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+              <button id="three" class="calc__num">3</button>
+            </div>
+          </div>
+
+          <div class="calc__box d-flex align-items-center">
+            <div class="col-4 d-flex justify-content-center">
+              <button id="deleteOne" class="calc__num"><i class='bx bxs-tag-x'></i></button>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+              <button id="zero" class="calc__num">0</button>
+            </div>
+            <div class="col-4 d-flex justify-content-center">
+              <button id="dot" class="calc__num">.</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <button id="equal" class="calc__equal">=</button>
+        </div>
+      </div>
+
+      <div class="calc__box d-flex align-items-center">
+        <div class="col-3 d-flex justify-content-center">
+          <button id="divide" class="calc__num">/</button>
+          <!-- <i class="fa fa-divide"></i> -->
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <button id="multiply" class="calc__num">*</button>
+          <!-- <i class='bx bx-x'></i> -->
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <button id="deduct" class="calc__num">-</button>
+        </div>
+        <div class="col-3 d-flex justify-content-center">
+          <button id="addition" class="calc__num">+</button>
+        </div>
+      </div>
+
+      <div id="add" class="calc__add">
+        <div class="calc__box d-flex align-items-center">
+          <div class="col-4 d-flex justify-content-center">
+            <button id="sin" class="calc__num">sin</button>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <button id="cos" class="calc__num">cos</button>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <button id="tan" class="calc__num">tan</button>
+          </div>
+        </div>
+        
+        <div class="calc__box d-flex align-items-center">
+          <div class="col-4 d-flex justify-content-center">
+            <button id="fact" class="calc__num">x!</button>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <button id="pi" class="calc__num">&#960</button>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <button id="log" class="calc__num">log</button>
+          </div>
+        </div>
+
+        <div class="calc__box d-flex align-items-center">
+          <div class="col-4 d-flex justify-content-center">
+            <button id="pumpkin__left" class="calc__num">(</button>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <button id="pumpkin__right" class="calc__num">)</button>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <button id="root" class="calc__num">√</button>
+          </div>
+        </div>
+
+        <div class="calc__box d-flex align-items-center">
+          <div class="col-4 d-flex justify-content-center">
+            <button id="exponet" class="calc__num">e</button>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <button id="percent" class="calc__num">%</button>
+          </div>
+          <div class="col-4 d-flex justify-content-center">
+            <button id="pow" class="calc__num">x</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
   <script src="js/main.js"></script>
 </body>
 
