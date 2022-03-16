@@ -18,6 +18,18 @@ const elDivide = document.getElementById("divide");
 const elMultiply = document.getElementById("multiply");
 const elDeduct = document.getElementById("deduct");
 const elAddition = document.getElementById("addition");
+const elFact = document.getElementById("fact");
+const elSin = document.getElementById("sin");
+const elCos = document.getElementById("cos");
+const elTan = document.getElementById("tan");
+const elLog = document.getElementById("log");
+const elPi = document.getElementById("pi");
+const elPumpkinLeft = document.getElementById("pumpkin__left");
+const elPumpkinRight = document.getElementById("pumpkin__right");
+const elRoot = document.getElementById("root");
+const elPercent = document.getElementById("percent");
+const elExponet = document.getElementById("exponet");
+const elPow = document.getElementById("pow");
 const elEqual = document.getElementById("equal");
 
 
@@ -100,6 +112,74 @@ elDivide.addEventListener("click", () => {
   value += elDivide.innerText;
   elOutput.innerText = value;
 });
+
+elFact.addEventListener("click", () => {
+  let a = 1;
+  for(let i = 1; i <= eval(value); i++){
+    a *= i;
+  }
+  elOutput.innerText = a;
+});
+
+elSin.addEventListener("click", () => {
+  value = Math.sin(eval(value));
+  elOutput.innerText = value;
+});
+
+elCos.addEventListener("click", () => {
+  value = Math.cos(eval(value));
+  elOutput.innerText = value;
+});
+
+elLog.addEventListener("click", () => {
+  value = Math.log(eval(value));
+  elOutput.innerText = value;
+});
+
+elTan.addEventListener("click", () => {
+  value = Math.tan(eval(value));
+  elOutput.innerText = value;
+});
+
+elLog.addEventListener("click", () => {
+  value = Math.log(eval(value));
+  elOutput.innerText = value;
+});
+
+elPi.addEventListener("click", () => {
+  value = Math.PI;
+  elOutput.innerText = value;
+});
+
+elPumpkinLeft.addEventListener("click", () => {
+  value += elPumpkinLeft.innerText;
+  elOutput.innerText = value;
+});
+elPumpkinRight.addEventListener("click", () => {
+  value += elPumpkinRight.innerText;
+  elOutput.innerText = value;
+});
+
+elRoot.addEventListener("click", () => {
+  value = Math.sqrt(eval(value));
+  elOutput.innerText = value;
+});
+
+elPercent.addEventListener("click", () => {
+  value += elPercent.innerText;
+  elOutput.innerText = value;
+});
+
+elPow.addEventListener("click", () => {
+  value = Math.pow(eval(value), 2);
+  elOutput.innerText = value;
+});
+
+elExponet.addEventListener("click", () => {
+  value = Math.E(eval(value));
+  elOutput.innerText = value;
+});
+
 
 elEqual.addEventListener("click", () => {
   elOutput.innerText = eval(elOutput.innerText);
