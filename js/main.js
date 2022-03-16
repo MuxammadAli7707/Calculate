@@ -175,10 +175,10 @@ elPow.addEventListener("click", () => {
   elOutput.innerText = value;
 });
 
-elExponet.addEventListener("click", () => {
-  value = Math.E(eval(value));
-  elOutput.innerText = value;
-});
+// elExponet.addEventListener("click", () => {
+//   value = Math.E(eval(value));
+//   elOutput.innerText = value;
+// });
 
 
 elEqual.addEventListener("click", () => {
